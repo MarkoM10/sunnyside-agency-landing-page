@@ -1,0 +1,19 @@
+@import "../styles/mixin.scss";
+@import "../styles/variables.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+.pageWrapper {
+  width: 100vw;
+
+  & header {
+    background: url("../images/desktop/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+}
