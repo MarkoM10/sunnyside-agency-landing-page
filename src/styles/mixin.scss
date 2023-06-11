@@ -4,6 +4,12 @@
   align-content: center;
   flex-wrap: wrap;
 }
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 @mixin gridCenter {
   display: grid;
   justify-items: center;
