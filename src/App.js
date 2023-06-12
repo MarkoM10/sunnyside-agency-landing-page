@@ -64,6 +64,27 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="thirdArticle">
+          <div className="cherrySide">
+            <div className="leftCherry">
+              <label>Graphic Design</label>
+              <p>
+                Great design makes you memorable. We deliver<br></br> artwork
+                that underscores your brand message<br></br> and captures
+                potential clients' attention.
+              </p>
+            </div>
+          </div>
+          <div className="orangeSide">
+            <div className="rightOrange">
+              <label>Photography</label>
+              <p>
+                Increase your credibility by getting the most<br></br> stunning,
+                high-quality photos that improve your <br></br>business image.
+              </p>
+            </div>
+          </div>
+        </section>
       </section>
     </div>
   );

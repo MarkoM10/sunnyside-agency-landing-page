@@ -82,120 +82,178 @@
   & .articles {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 82% 82%;
-  }
+    grid-template-rows: 82% 82% 82%;
 
-  & .firstArticle {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    & .firstArticle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-    & .leftSide {
-      @include flexCenter;
+      & .leftSide {
+        @include flexCenter;
 
-      & div:first-child {
-        max-width: 70%;
-        gap: 2rem;
-        display: flex;
-        flex-direction: column;
+        & div:first-child {
+          max-width: 70%;
+          gap: 2rem;
+          display: flex;
+          flex-direction: column;
 
-        & label {
-          font-family: $fraunces;
-          font-size: 2.9rem;
-          font-weight: 900;
-          color: $veryDarkDesaturetedBlue;
+          & label {
+            font-family: $fraunces;
+            font-size: 2.9rem;
+            font-weight: 900;
+            color: $veryDarkDesaturetedBlue;
+          }
+
+          & p {
+            font-family: $barlow;
+            font-weight: 600;
+            color: $veryDarkDesaturetedBlue;
+          }
+
+          & a {
+            position: relative;
+            text-decoration: none;
+            color: $veryDarkDesaturetedBlue;
+            font-weight: 900;
+            font-family: $fraunces;
+
+            &:before {
+              content: "";
+              position: absolute;
+              bottom: -0.2rem;
+              left: -0.45rem;
+              width: 22%;
+              height: 0.7rem;
+              background: hsla(51, 100%, 49%, 0.404);
+              z-index: -1;
+              border-radius: 0.5rem;
+              transition: 0.35s;
+            }
+          }
         }
+      }
 
-        & p {
-          font-family: $barlow;
-          font-weight: 600;
-          color: $veryDarkDesaturetedBlue;
-        }
+      & div:nth-child(2) {
+        background: url("../images/desktop/image-transform.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+    }
 
-        & a {
-          position: relative;
-          text-decoration: none;
-          color: $veryDarkDesaturetedBlue;
-          font-weight: 900;
-          font-family: $fraunces;
+    & .secondArticle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-          &:before {
-            content: "";
-            position: absolute;
-            bottom: -0.2rem;
-            left: -0.45rem;
-            width: 22%;
-            height: 0.7rem;
-            background: hsla(51, 100%, 49%, 0.404);
-            z-index: -1;
-            border-radius: 0.5rem;
-            transition: 0.35s;
+      & .leftImage {
+        background: url("../images/desktop/image-stand-out.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+
+      & .rightSide {
+        @include flexCenter;
+
+        & div:first-child {
+          max-width: 70%;
+          gap: 2rem;
+          display: flex;
+          flex-direction: column;
+
+          & label {
+            font-family: $fraunces;
+            font-size: 2.9rem;
+            font-weight: 900;
+            color: $veryDarkDesaturetedBlue;
+          }
+
+          & p {
+            font-family: $barlow;
+            font-weight: 600;
+            color: $veryDarkDesaturetedBlue;
+          }
+
+          & a {
+            position: relative;
+            text-decoration: none;
+            color: $veryDarkDesaturetedBlue;
+            font-weight: 900;
+            font-family: $fraunces;
+
+            &:before {
+              content: "";
+              position: absolute;
+              bottom: -0.2rem;
+              left: -0.45rem;
+              width: 22%;
+              height: 0.7rem;
+              background: hsla(7, 99%, 70%, 0.493);
+              z-index: -1;
+              border-radius: 0.5rem;
+              transition: 0.35s;
+            }
           }
         }
       }
     }
 
-    & div:nth-child(2) {
-      background: url("../images/desktop/image-transform.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100%;
-    }
-  }
+    & .thirdArticle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-  & .secondArticle {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    & .leftImage {
-      background: url("../images/desktop/image-stand-out.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100%;
-    }
-
-    & .rightSide {
-      @include flexCenter;
-
-      & div:first-child {
-        max-width: 70%;
-        gap: 2rem;
+      & .cherrySide {
+        background: url("../images/desktop/image-graphic-design.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
-        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: end;
+        padding: 4rem;
 
-        & label {
+        & .leftCherry label {
           font-family: $fraunces;
-          font-size: 2.9rem;
+          color: $darkDesaturatedCyan;
           font-weight: 900;
-          color: $veryDarkDesaturetedBlue;
+          font-size: 1.5rem;
         }
 
-        & p {
+        & .leftCherry p {
+          color: $darkDesaturatedCyan;
           font-family: $barlow;
           font-weight: 600;
-          color: $veryDarkDesaturetedBlue;
+          margin-top: 1.5rem;
+          line-height: 1.5rem;
+        }
+      }
+      & .orangeSide {
+        background: url("../images/desktop/image-photography.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: end;
+        padding: 4rem;
+
+        & .rightOrange label {
+          font-family: $fraunces;
+          color: $darkBlue;
+          font-weight: 900;
+          font-size: 1.5rem;
         }
 
-        & a {
-          position: relative;
-          text-decoration: none;
-          color: $veryDarkDesaturetedBlue;
-          font-weight: 900;
-          font-family: $fraunces;
-
-          &:before {
-            content: "";
-            position: absolute;
-            bottom: -0.2rem;
-            left: -0.45rem;
-            width: 22%;
-            height: 0.7rem;
-            background: hsla(7, 99%, 70%, 0.493);
-            z-index: -1;
-            border-radius: 0.5rem;
-            transition: 0.35s;
-          }
+        & .rightOrange p {
+          color: $darkDesaturatedCyan;
+          font-family: $barlow;
+          font-weight: 600;
+          margin-top: 1.5rem;
+          line-height: 1.5rem;
         }
       }
     }
