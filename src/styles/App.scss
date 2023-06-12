@@ -78,4 +78,126 @@
       font-weight: 900;
     }
   }
+
+  & .articles {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 82% 82%;
+  }
+
+  & .firstArticle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & .leftSide {
+      @include flexCenter;
+
+      & div:first-child {
+        max-width: 70%;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        & label {
+          font-family: $fraunces;
+          font-size: 2.9rem;
+          font-weight: 900;
+          color: $veryDarkDesaturetedBlue;
+        }
+
+        & p {
+          font-family: $barlow;
+          font-weight: 600;
+          color: $veryDarkDesaturetedBlue;
+        }
+
+        & a {
+          position: relative;
+          text-decoration: none;
+          color: $veryDarkDesaturetedBlue;
+          font-weight: 900;
+          font-family: $fraunces;
+
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: -0.2rem;
+            left: -0.45rem;
+            width: 22%;
+            height: 0.7rem;
+            background: hsla(51, 100%, 49%, 0.404);
+            z-index: -1;
+            border-radius: 0.5rem;
+            transition: 0.35s;
+          }
+        }
+      }
+    }
+
+    & div:nth-child(2) {
+      background: url("../images/desktop/image-transform.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%;
+    }
+  }
+
+  & .secondArticle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & .leftImage {
+      background: url("../images/desktop/image-stand-out.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%;
+    }
+
+    & .rightSide {
+      @include flexCenter;
+
+      & div:first-child {
+        max-width: 70%;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        & label {
+          font-family: $fraunces;
+          font-size: 2.9rem;
+          font-weight: 900;
+          color: $veryDarkDesaturetedBlue;
+        }
+
+        & p {
+          font-family: $barlow;
+          font-weight: 600;
+          color: $veryDarkDesaturetedBlue;
+        }
+
+        & a {
+          position: relative;
+          text-decoration: none;
+          color: $veryDarkDesaturetedBlue;
+          font-weight: 900;
+          font-family: $fraunces;
+
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: -0.2rem;
+            left: -0.45rem;
+            width: 22%;
+            height: 0.7rem;
+            background: hsla(7, 99%, 70%, 0.493);
+            z-index: -1;
+            border-radius: 0.5rem;
+            transition: 0.35s;
+          }
+        }
+      }
+    }
+  }
 }
