@@ -1,6 +1,14 @@
 import "../src/styles/App.scss";
 import logoSvg from "../src/images/logo.svg";
+import footerlogoSvg from "../src/images/footer-logo.svg";
 import downArrow from "../src/images/icon-arrow-down.svg";
+import women from "../src/images/image-emily.jpg";
+import men from "../src/images/image-thomas.jpg";
+import women2 from "../src/images/image-jennie.jpg";
+import facebook from "../src/images/icon-facebook.svg";
+import instagram from "../src/images/icon-instagram.svg";
+import twitter from "../src/images/icon-twitter.svg";
+import pinterest from "../src/images/icon-pinterest.svg";
 
 function App() {
   return (
@@ -85,6 +93,75 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="testimonials">
+          <label className="testimonialHeading">CLIENT TESTIMONIALS</label>
+          <div className="testimonialsGrid">
+            <div className="testimonial">
+              <img src={women}></img>
+              <p>
+                We put our trust in Sunnyside and they<br></br>delivered,making
+                sure our needs were met<br></br>and deadlines were always hit.
+              </p>
+              <div>
+                <label>Emily R.</label>
+                <label>Marketing Director</label>
+              </div>
+            </div>
+            <div className="testimonial">
+              <img src={men}></img>
+              <p>
+                Sunnyside's enthusiasm coupled with their<br></br>keen interest
+                in our brand's success made it<br></br>a satisfying and
+                enjoyable experience.
+              </p>
+              <div>
+                <label>Thomas S.</label>
+                <label>Chief Operating Officer</label>
+              </div>
+            </div>
+            <div className="testimonial">
+              <img src={women2}></img>
+              <p>
+                Incredible end result! Our sales increased<br></br> over 400%
+                when we worked with Sunnyside.<br></br>Highly recommended!
+              </p>
+              <div>
+                <label>Jennie F.</label>
+                <label>Business officer</label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="imagesGrid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </section>
+        <footer className="footer">
+          <div>
+            <img alt="footerLogo" src={footerlogoSvg}></img>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img alt="facebookIcon" src={facebook}></img>
+            <img alt="instagramIcon" src={instagram}></img>
+            <img alt="twitterIcon" src={twitter}></img>
+            <img alt="pinterestIcon" src={pinterest}></img>
+          </div>
+        </footer>
       </section>
     </div>
   );
