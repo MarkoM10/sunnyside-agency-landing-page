@@ -9,6 +9,8 @@
   font-size: 18px;
 }
 .siteWrapper {
+  display: grid;
+
   & .heroSection {
     background: url("../images/desktop/image-header.jpg");
     background-size: cover;
@@ -16,12 +18,16 @@
     background-position: center;
     height: 100vh;
 
+    @include mobile {
+      height: 80vh;
+    }
+
     & .headerWrapper {
       @include flexCenter;
       height: 12vh;
 
       & header {
-        width: 95%;
+        width: 90%;
         @include flexBetween;
 
         & img {
@@ -102,7 +108,7 @@
           & .hamburgerList {
             display: block;
             background-color: $white;
-            width: 90%;
+            width: 89%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -110,7 +116,7 @@
 
             @include miniTablet {
               position: absolute;
-              right: 5%;
+              right: 6%;
               top: 12%;
               padding: 1.5rem 0;
             }
@@ -133,6 +139,9 @@
 
     @include mobile {
       background: url("../images/mobile/image-header.jpg") !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
     }
   }
 
@@ -146,6 +155,17 @@
       letter-spacing: 0.5rem;
       margin: 2rem 0 4rem 0;
       font-weight: 900;
+
+      @include mobile {
+        font-size: 2rem;
+        margin: 2rem 0;
+      }
+    }
+
+    & img {
+      @include mobile {
+        width: 1.8rem;
+      }
     }
   }
 
@@ -154,9 +174,18 @@
     display: grid;
     grid-template-rows: 60% 60% 60% 60% 45% 30%;
 
+    @include mobile {
+      grid-template-rows: 40% 40% 40% 40% 15% 10%;
+    }
+
     & .firstArticle {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
 
       & .leftSide {
         @include flexCenter;
@@ -217,6 +246,13 @@
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
+
+        @include mobile {
+          background: url("../images/mobile/image-transform.jpg");
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
       }
     }
 
@@ -224,12 +260,24 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
 
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
       & .leftImage {
         background: url("../images/desktop/image-stand-out.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
+
+        @include mobile {
+          background: url("../images/mobile/image-stand-out.jpg");
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
       }
 
       & .rightSide {
@@ -290,6 +338,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
 
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
       & .cherrySide {
         background: url("../images/desktop/image-graphic-design.jpg");
         background-size: cover;
@@ -300,6 +353,13 @@
         justify-content: center;
         align-items: end;
         padding: 4rem;
+
+        @include mobile {
+          background: url("../images/mobile/image-graphic-design.jpg");
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
 
         & .leftCherry label {
           font-family: $fraunces;
@@ -326,6 +386,13 @@
         justify-content: center;
         align-items: end;
         padding: 4rem;
+
+        @include mobile {
+          background: url("../images/mobile/image-photography.jpg");
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
 
         & .rightOrange label {
           font-family: $fraunces;
@@ -356,6 +423,10 @@
         font-weight: 900;
         letter-spacing: 0.4rem;
         color: $grayishBlue;
+
+        @include mobile {
+          font-size: 0.8rem;
+        }
       }
 
       & .testimonialsGrid {
@@ -364,6 +435,12 @@
         grid-template-rows: 1fr;
         justify-items: center;
         text-align: center;
+
+        @include mobile {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          gap: 3rem;
+        }
 
         & img {
           border-radius: 50%;
@@ -408,11 +485,19 @@
           }
         }
       }
+
+      @include mobile {
+        gap: 2rem;
+      }
     }
 
     & .imagesGrid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+
+      @include mobile {
+        grid-template-columns: 1fr 1fr;
+      }
 
       & div:first-child {
         background: url("../images/desktop/image-gallery-milkbottles.jpg");
