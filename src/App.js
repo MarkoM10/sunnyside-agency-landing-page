@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "../src/styles/App.scss";
 import logoSvg from "../src/images/logo.svg";
 import footerlogoSvg from "../src/images/footer-logo.svg";
@@ -9,8 +10,32 @@ import facebook from "../src/images/icon-facebook.svg";
 import instagram from "../src/images/icon-instagram.svg";
 import twitter from "../src/images/icon-twitter.svg";
 import pinterest from "../src/images/icon-pinterest.svg";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 function App() {
+  const [openHamburgerMenu, setOpenHamburgerMenu] =
+    useState("hamburgerListNone");
+
+  const [showHamburgerIcon, setShowHamburgerIcon] = useState("hamburger");
+  const [showXMark, setShowXMark] = useState("xMarkNone");
+
+  const openHamburger = () => {
+    setOpenHamburgerMenu("hamburgerList");
+    setShowHamburgerIcon("hamburgerNone");
+  };
+
+  useEffect(() => {
+    if (showHamburgerIcon == "hamburgerNone") {
+      setShowXMark("xMark");
+    }
+  }, [showHamburgerIcon]);
+
+  const closeHamburger = () => {
+    setOpenHamburgerMenu("hamburgerListNone");
+    setShowXMark("xMarkNone");
+    setShowHamburgerIcon("hamburger");
+  };
+
   return (
     <div className="siteWrapper">
       <section className="heroSection">
@@ -21,7 +46,33 @@ function App() {
               <img src={logoSvg}></img>
             </a>
             <nav className="navbar">
-              <ul>
+              <div className="hamburgerWrapperNone">
+                <Bars3Icon
+                  color="white"
+                  className={showHamburgerIcon}
+                  onClick={() => openHamburger()}
+                />
+                <XMarkIcon
+                  color="white"
+                  className={showXMark}
+                  onClick={() => closeHamburger()}
+                />
+                <ul className={openHamburgerMenu}>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Services</a>
+                  </li>
+                  <li>
+                    <a href="#">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#">CONTACT</a>
+                  </li>
+                </ul>
+              </div>
+              <ul className="menuList">
                 <li>
                   <a href="#">About</a>
                 </li>

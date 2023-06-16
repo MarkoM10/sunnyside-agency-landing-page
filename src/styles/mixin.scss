@@ -15,3 +15,23 @@
   justify-items: center;
   align-items: center;
 }
+@mixin laptop {
+  @media (max-width: 1084px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin miniTablet {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 390px) {
+    @content;
+  }
+}
