@@ -51,8 +51,6 @@
 
             @include miniTablet {
               display: block;
-              // margin-top: 1rem;
-              // position: relative;
             }
 
             & .hamburgerNone {
@@ -129,10 +127,6 @@
               color: $veryDarkGrayishBlue;
             }
           }
-        }
-
-        @include miniTablet {
-          // flex-flow: column;
         }
       }
     }
@@ -277,6 +271,7 @@
           background-size: cover !important;
           background-position: center !important;
           background-repeat: no-repeat !important;
+          grid-row: 2;
         }
       }
 
@@ -448,7 +443,6 @@
         }
 
         & .testimonial {
-          // padding: 2rem;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -495,7 +489,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
 
-      @include mobile {
+      @include miniTablet {
         grid-template-columns: 1fr 1fr;
       }
 
